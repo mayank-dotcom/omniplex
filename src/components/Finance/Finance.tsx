@@ -38,12 +38,54 @@ const Finance = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
-        <div className={styles.title}>Finance</div>
+        <div className={styles.title}>Subscription Plans</div>
       </div>
       <div className={styles.content}>
-        <button className={styles.paymentButton} onClick={handleMakePayment}>
-          Make Payment
-        </button>
+        <div className={styles.subscriptionCard}>
+          <div className={styles.cardHeader}>
+            <div className={styles.planBadge}>RECOMMENDED</div>
+            <h2 className={styles.planTitle}>Pro Plan</h2>
+            <div className={styles.priceContainer}>
+              <span className={styles.currency}>$</span>
+              <span className={styles.price}>10</span>
+              <span className={styles.period}>/month</span>
+            </div>
+          </div>
+          
+          <div className={styles.cardBody}>
+            <ul className={styles.featureList}>
+              <li className={styles.feature}>
+                <span className={styles.checkIcon}>✓</span>
+                Unlimited AI conversations
+              </li>
+              <li className={styles.feature}>
+                <span className={styles.checkIcon}>✓</span>
+                Advanced search capabilities
+              </li>
+              <li className={styles.feature}>
+                <span className={styles.checkIcon}>✓</span>
+                Priority customer support
+              </li>
+              <li className={styles.feature}>
+                <span className={styles.checkIcon}>✓</span>
+                Access to premium features
+              </li>
+              <li className={styles.feature}>
+                <span className={styles.checkIcon}>✓</span>
+                No usage limits
+              </li>
+            </ul>
+          </div>
+          
+          <div className={styles.cardFooter}>
+            <button className={styles.subscribeButton} onClick={handleMakePayment}>
+              Subscribe to Pro
+            </button>
+            <p className={styles.disclaimer}>
+              Cancel anytime • 30-day money-back guarantee
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -32,8 +32,8 @@
   margin-top: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 16px 4px;
   scrollbar-width: none;
 }
@@ -58,4 +58,164 @@
 
 .paymentButton:active {
   transform: translateY(0);
+}
+
+/* Subscription Card Styles */
+.subscriptionCard {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  border: 1px solid #4b5563;
+  border-radius: 20px;
+  padding: 0;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.subscriptionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.6);
+  border-color: #6366f1;
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.planBadge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.planTitle {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.currency {
+  color: #d1d5db;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.price {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.period {
+  color: #d1d5db;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+.featureList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.checkIcon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.subscribeButton {
+  width: 100%;
+  background: #ff0000 !important; /* Temporary bright red for debugging */
+  background-color: #ff0000 !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.4);
+  margin-bottom: 16px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  min-height: 56px;
+  z-index: 1;
+  position: relative;
+}
+
+.subscribeButton:hover {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%) !important;
+  background-color: #5b21b6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(99, 102, 241, 0.5);
+  color: #ffffff !important;
+}
+
+.subscribeButton:active {
+  transform: translateY(0);
+}
+
+.disclaimer {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
 }
