@@ -67,8 +67,8 @@ export async function POST(request: NextRequest) {
             payment_method_types: ['card'],
             mode: 'payment',
             line_items: lineItems,
-            success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/success`,
-            cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/cancel`,
+            success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://omniplex-pied.vercel.app/'}/success`,
+            cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://omniplex-pied.vercel.app/'}/cancel`,
         });
         
         return NextResponse.json({ url: session.url });
