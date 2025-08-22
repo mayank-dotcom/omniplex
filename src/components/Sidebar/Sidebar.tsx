@@ -8,6 +8,7 @@ import Library from "../Library/Library";
 import Plugins from "../Plugins/Plugins";
 import Profile from "../Profile/Profile";
 import Settings from "../Settings/Settings";
+import Finance from "../Finance/Finance";
 import Auth from "../Auth/Auth";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
@@ -25,6 +26,8 @@ import Setting from "../../../public/svgs/sidebar/Setting_Active.svg";
 import SettingInactive from "../../../public/svgs/sidebar/Setting_Inactive.svg";
 import Plugin from "../../../public/svgs/sidebar/Plugin_Active.svg";
 import PluginInactive from "../../../public/svgs/sidebar/Plugin_Inactive.svg";
+import Dollar from "../../../public/svgs/sidebar/Dollar_Active.svg";
+import DollarInactive from "../../../public/svgs/sidebar/Dollar_Inactive.svg";
 import User from "../../../public/svgs/sidebar/User.svg";
 import Collapse from "../../../public/svgs/sidebar/Collapse.svg";
 
@@ -194,6 +197,20 @@ const Sidebar = () => {
                       onClick={() => setSelected("plugins")}
                     />
                   )}
+                  {selected === "finance" ? (
+                    <Image
+                      src={Dollar}
+                      alt="Finance"
+                      className={styles.iconActive}
+                    />
+                  ) : (
+                    <Image
+                      src={DollarInactive}
+                      alt="Finance"
+                      className={styles.icon}
+                      onClick={() => setSelected("finance")}
+                    />
+                  )}
                 </div>
                 <div>
                   <Image
@@ -223,6 +240,8 @@ const Sidebar = () => {
                 <Settings />
               ) : selected === "plugins" ? (
                 <Plugins />
+              ) : selected === "finance" ? (
+                <Finance />
               ) : (
                 <Profile close={closeSidebar} />
               )}
